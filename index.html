@@ -394,6 +394,45 @@
             transform: translateY(-3px);
         }
 
+        .tool-card.featured {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            position: relative;
+            border: 3px solid #ffd700;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            transform: scale(1.02);
+        }
+
+        .tool-card.featured::before {
+            content: "⭐ FEATURED";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ffd700;
+            color: #333;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool-card.featured:hover {
+            transform: scale(1.02) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .tool-card.other-option {
+            filter: grayscale(70%);
+            opacity: 0.8;
+        }
+
+        .tool-card.other-option:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
         .tool-name {
             font-weight: 600;
             font-size: 1.1rem;
@@ -401,10 +440,20 @@
             color: #2d3748;
         }
 
+        .tool-card.featured .tool-name {
+            color: white;
+            font-size: 1.2rem;
+        }
+
         .tool-focus {
             color: #667eea;
             font-size: 0.9rem;
             margin-bottom: 0.5rem;
+        }
+
+        .tool-card.featured .tool-focus {
+            color: #e2e8f0;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
@@ -665,32 +714,32 @@
                 
                 <h3>Leading Platforms</h3>
                 <div class="tools-grid">
-                    <div class="tool-card">
+                    <div class="tool-card featured">
+                        <div class="tool-name">Eppo by Datadog</div>
+                        <div class="tool-focus">Product Experimentation Platform</div>
+                        <p>Modern experimentation platform with advanced statistical methods. Focuses on product analytics and feature testing with enterprise-grade reliability.</p>
+                    </div>
+                    <div class="tool-card other-option">
                         <div class="tool-name">LaunchDarkly</div>
                         <div class="tool-focus">Enterprise Feature Management</div>
                         <p>Market leader in feature flagging with robust governance and reliability. Developer-centric with powerful targeting.</p>
                     </div>
-                    <div class="tool-card">
+                    <div class="tool-card other-option">
                         <div class="tool-name">Optimizely</div>
                         <div class="tool-focus">Digital Experience Platform</div>
                         <p>Pioneer in A/B testing with powerful visual editor. Strong in web experimentation and personalization.</p>
                     </div>
-                    <div class="tool-card">
-                        <div class="tool-name">Statsig</div>
-                        <div class="tool-focus">All-in-One Platform</div>
-                        <p>Integrates feature flags, experimentation, and analytics. Warehouse-native with transparent statistics.</p>
-                    </div>
-                    <div class="tool-card">
+                    <div class="tool-card other-option">
                         <div class="tool-name">VWO</div>
                         <div class="tool-focus">Web Experimentation</div>
                         <p>User-friendly visual editor for marketers. Excellent for conversion rate optimization (CRO).</p>
                     </div>
-                    <div class="tool-card">
+                    <div class="tool-card other-option">
                         <div class="tool-name">GrowthBook</div>
                         <div class="tool-focus">Open Source Alternative</div>
                         <p>Warehouse-native open source platform. Flexible deployment with visual editor for no-code tests.</p>
                     </div>
-                    <div class="tool-card">
+                    <div class="tool-card other-option">
                         <div class="tool-name">Split.io</div>
                         <div class="tool-focus">Feature Delivery & Monitoring</div>
                         <p>Connects feature delivery with impact monitoring. Intuitive UI for technical and non-technical users.</p>
